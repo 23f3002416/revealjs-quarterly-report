@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Earnings Report - 23f3002416@ds.study.iitm.ac.in</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/zenburn.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
@@ -101,7 +104,7 @@
             <!-- Code Sample Slide -->
             <section>
                 <h2>Risk Assessment Algorithm</h2>
-                <pre><code class="python" data-line-numbers="1-2|4-6|8-12">
+                <pre><code class="language-python" data-trim data-noescape data-line-numbers="1-2|4-6|8-12">
 import numpy as np
 import pandas as pd
 
@@ -122,6 +125,43 @@ stress_var = stress_test_scenario(portfolio_positions)
                 <aside class="notes">
                     This code demonstrates our advanced risk management algorithms. We use Value at Risk calculations and stress testing to ensure portfolio resilience.
                 </aside>
+            </section>
+
+            <!-- Additional Code Sample with SQL -->
+            <section>
+                <h2>Data Analysis Queries</h2>
+                <pre><code class="language-sql" data-trim data-noescape>
+-- Calculate quarterly revenue growth
+SELECT 
+    quarter,
+    SUM(revenue) as total_revenue,
+    LAG(SUM(revenue)) OVER (ORDER BY quarter) as prev_quarter,
+    ROUND(
+        (SUM(revenue) - LAG(SUM(revenue)) OVER (ORDER BY quarter)) / 
+        LAG(SUM(revenue)) OVER (ORDER BY quarter) * 100, 2
+    ) as growth_percentage
+FROM financial_data
+WHERE year = 2024
+GROUP BY quarter
+ORDER BY quarter;
+                </code></pre>
+                <pre><code class="language-javascript" data-trim data-noescape>
+// Real-time dashboard update
+async function updateMetrics() {
+    const data = await fetch('/api/metrics');
+    const metrics = await data.json();
+    
+    document.getElementById('revenue').textContent = 
+        `$${metrics.revenue.toLocaleString()}M`;
+    
+    // Animate the update
+    gsap.from('#revenue', {
+        scale: 1.2,
+        duration: 0.5,
+        ease: 'bounce.out'
+    });
+}
+                </code></pre>
             </section>
 
             <!-- Mathematical Formulas -->
