@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/zenburn.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .reveal .slides section .fragment.highlight-red.visible {
+            color: #ff0000;
+        }
+        .custom-chart {
+            height: 400px;
+            margin: 20px auto;
+            background: linear-gradient(45deg, #e3f2fd, #f3e5f5);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Quarterly Earnings Report</h1>
+                <h3>Financial Institution Performance Analysis</h3>
+                <p>
+                    <small>Prepared by: <a href="mailto:23f3002416@ds.study.iitm.ac.in">23f3002416@ds.study.iitm.ac.in</a></small>
+                </p>
+                <aside class="notes">
+                    Welcome to our quarterly earnings presentation. This report covers Q4 2024 performance metrics and forward-looking projections for 2025.
+                </aside>
+            </section>
+
+            <!-- Markdown Slide -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+
+                    ### Key Performance Indicators
+
+                    - **Revenue Growth**: 12.3% YoY increase
+                    - **Net Interest Margin**: 3.85% 
+                    - **Return on Equity**: 15.2%
+                    - **Cost-to-Income Ratio**: 58.7%
+
+                    ---
+
+                    ### Market Position
+
+                    Our institution maintains a **strong competitive position** in the financial services sector with:
+
+                    ```
+                    • Digital transformation initiatives
+                    • Risk management excellence  
+                    • Customer satisfaction improvements
+                    • Regulatory compliance leadership
+                    ```
+                </textarea>
+                <aside class="notes">
+                    This slide summarizes our key achievements this quarter. Notice the strong revenue growth and improved efficiency metrics.
+                </aside>
+            </section>
+
+            <!-- Animated Financial Metrics -->
+            <section>
+                <h2>Financial Performance Highlights</h2>
+                <ul>
+                    <li class="fragment">Revenue: $2.8B <span class="fragment highlight-green">(+12.3%)</span></li>
+                    <li class="fragment">Operating Income: $850M <span class="fragment highlight-green">(+8.7%)</span></li>
+                    <li class="fragment">Net Income: $650M <span class="fragment highlight-green">(+15.1%)</span></li>
+                    <li class="fragment fade-up">Assets Under Management: $45.2B</li>
+                </ul>
+                <div class="fragment custom-chart">
+                    <p><strong>Interactive Performance Dashboard</strong><br>
+                    📈 All metrics trending upward</p>
+                </div>
+                <aside class="notes">
+                    Each metric appears sequentially to emphasize our strong performance across all key areas. The green highlights show positive growth.
+                </aside>
+            </section>
+
+            <!-- Code Sample Slide -->
+            <section>
+                <h2>Risk Assessment Algorithm</h2>
+                <pre><code class="python" data-line-numbers="1-2|4-6|8-12">
+import numpy as np
+import pandas as pd
+
+def calculate_var(portfolio_returns, confidence_level=0.05):
+    """Calculate Value at Risk using historical simulation"""
+    return np.percentile(portfolio_returns, confidence_level * 100)
+
+def stress_test_scenario(portfolio, shock_factor=1.5):
+    """Apply stress testing to portfolio positions"""
+    stressed_returns = portfolio * shock_factor
+    var_stressed = calculate_var(stressed_returns)
+    return var_stressed
+
+# Risk metrics calculation
+portfolio_var = calculate_var(daily_returns)
+stress_var = stress_test_scenario(portfolio_positions)
+                </code></pre>
+                <aside class="notes">
+                    This code demonstrates our advanced risk management algorithms. We use Value at Risk calculations and stress testing to ensure portfolio resilience.
+                </aside>
+            </section>
+
+            <!-- Mathematical Formulas -->
+            <section>
+                <h2>Financial Formulas & Models</h2>
+                <p>Capital Adequacy Ratio (Basel III):</p>
+                \[CAR = \frac{T1 + T2}{RWA} \geq 8\%\]
+                
+                <div class="fragment">
+                    <p>Black-Scholes Option Pricing:</p>
+                    \[C = S_0 \cdot N(d_1) - K \cdot e^{-rT} \cdot N(d_2)\]
+                    
+                    <p>Where:</p>
+                    \[d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}}\]
+                </div>
+
+                <div class="fragment">
+                    <p>Portfolio Sharpe Ratio:</p>
+                    \[SR = \frac{R_p - R_f}{\sigma_p}\]
+                </div>
+                <aside class="notes">
+                    These are the core mathematical models we use for regulatory compliance, derivatives pricing, and performance evaluation.
+                </aside>
+            </section>
+
+            <!-- Market Analysis -->
+            <section>
+                <h2>Market Outlook & Strategy</h2>
+                <div class="r-stack">
+                    <img class="fragment" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2YwZjhkZiIvPgogIDx0ZXh0IHg9IjI1MCIgeT0iMTUwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMzMzMiPk1hcmtldCBUcmVuZHM8L3RleHQ+CiAgPGxpbmUgeDE9IjUwIiB5MT0iMjUwIiB4Mj0iNDUwIiB5Mj0iMTAwIiBzdHJva2U9IiM0Y2FmNTAiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4=" alt="Market Trends" />
+                    <div class="fragment">
+                        <h3>2025 Projections</h3>
+                        <ul>
+                            <li>Interest Rate Environment: Stabilizing</li>
+                            <li>Digital Banking Growth: +25%</li>
+                            <li>ESG Investment Focus: Expanding</li>
+                            <li>Regulatory Changes: Monitored</li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Our market analysis shows positive trends for 2025. The interest rate environment is stabilizing, which benefits our lending portfolio.
+                </aside>
+            </section>
+
+            <!-- Interactive Demo -->
+            <section>
+                <h2>Digital Banking Platform</h2>
+                <iframe data-src="data:text/html;charset=utf-8,%3Chtml%3E%3Cbody%20style%3D%22margin%3A0%3Bpadding%3A20px%3Bfont-family%3AArial%3Bbackground%3Alinear-gradient%28135deg%2C%20%23667eea%200%25%2C%20%23764ba2%20100%25%29%3Bcolor%3Awhite%3Btext-align%3Acenter%3B%22%3E%3Ch2%3ECustomer%20Portal%20Demo%3C%2Fh2%3E%3Cp%3EAccount%20Balance%3A%20%24125%2C430%3C%2Fp%3E%3Cp%3ETransactions%3A%20%2B15%25%20this%20quarter%3C%2Fp%3E%3Cp%3ESatisfaction%20Score%3A%20%E2%AD%90%E2%AD%90%E2%AD%90%E2%AD%90%E2%AD%90%2095%25%3C%2Fp%3E%3C%2Fbody%3E%3C%2Fhtml%3E" 
+                        width="800" height="400" data-preload></iframe>
+                <aside class="notes">
+                    This shows our new customer portal interface. Customer engagement has increased significantly with the new digital features.
+                </aside>
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <h2>Q&A Session</h2>
+                <div class="fragment">
+                    <h3>Contact Information</h3>
+                    <p>📧 <a href="mailto:23f3002416@ds.study.iitm.ac.in">23f3002416@ds.study.iitm.ac.in</a></p>
+                    <p>📞 Investor Relations: 1-800-FINANCE</p>
+                    <p>🌐 investor.relations@institution.com</p>
+                </div>
+                <div class="fragment fade-up">
+                    <h3>Thank You</h3>
+                    <p><em>Strong performance, strategic growth, sustainable future</em></p>
+                </div>
+                <aside class="notes">
+                    Thank you for your attention. We're happy to take questions about our quarterly performance and future strategy.
+                </aside>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+    <script>
+        Reveal.initialize({
+            // Display
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+
+            // Navigation
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Transition
+            transition: 'slide',
+
+            // Plugins
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+        });
+
+        // Custom interactions
+        Reveal.addEventListener('slidechanged', function(event) {
+            if (event.currentSlide.querySelector('.custom-chart')) {
+                console.log('Interactive chart slide loaded');
+            }
+        });
+    </script>
+</body>
+</html>
